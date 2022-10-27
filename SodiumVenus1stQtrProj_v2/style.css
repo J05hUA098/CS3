@@ -1,0 +1,80 @@
+
+.yes {
+font-family: Lucida Handwriting;
+position: relative;
+left: 21.5%;
+}
+
+.re {
+font-family: Lucida Handwriting;
+text-align: center;
+border-style:solid;
+border-color: #43f5f5;
+background-color:#42f5f5;
+}
+
+.head {
+float:left;
+background-color:#42f5f5;
+}
+
+body{
+margin:0px;
+}
+
+
+#joshua{
+border-style:solid;
+border-color: #42f5f5;
+background-color:#42f5f5;
+}
+
+.baldeo {
+	position: relative;
+	text-align: center;
+	left: -5px;
+	font-family: Lucida Handwriting;
+	font-size: 20px;
+	border-style:solid;
+	border-color: #42f5f5;
+	background-color:#42f5f5;
+}
+
+.text {
+	border-style:solid;
+	background-color:#ffeecc;
+	margin-left:0;
+}
+.text p {
+	margin-left:10px;
+}
+
+.text h1 {
+	margin-left:10px;
+}
+
+.text h2 {
+	margin-left:10px;
+}
+
+.bar {
+border-style: solid;
+border-color: #5f343f;
+background-color: #ffeecc;
+}
+
+.omaygor p {
+font-family: Papyrus;
+font-size: 20px;
+}
+
+.gwapo {
+font-family: Papyrus;
+font-size: 20px;
+}
+
+#list {
+font-family: Papyrus;
+font-size: 20px;
+margin-left: 450px;
+}
