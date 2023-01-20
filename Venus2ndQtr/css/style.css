@@ -1,0 +1,166 @@
+header {
+border-style:solid;
+border-color: black;
+background-color: #42f5f5;
+border-radius: 10px 20px 10px 20px;
+}
+
+#logo {
+float:left;
+background-color:#42f5f5;
+}
+
+#title {
+font-family: Lucida Handwriting;
+position: relative;
+left: 21.5%;
+}
+
+footer {
+border-style:solid;
+border-color: black;
+border-radius: 10px 20px 10px 20px;
+}
+
+.list {
+font-family:Heartwood;
+text-align: center;
+}
+
+aside {
+float: right;
+}
+
+section {
+text-align: center;
+border-style:solid;
+border-color: black;
+background-color:#b3cf99;
+border-radius: 10px 20px 10px 20px;
+margin-top: 3px;
+margin-bottom: 3px;
+transform: skewX(5deg);
+}
+
+article {
+border-style:solid;
+border-color: black;
+background-color:#ffeecc;
+border-radius: 10px 20px 10px 20px;
+}
+
+a {
+font-family: Heartwood;
+color: black;
+font-size: 25px;
+padding: 10px;
+text-decoration: none;
+}
+
+a:link {
+background-color: white;
+color: black;
+}
+
+a:hover {
+transition: 1s;
+background-color: red;
+color: white;
+overflow: hidden;
+}
+
+a:active {
+background-color: white;
+color: black;
+}
+
+
+.what {
+border-style:solid;
+border-color: black;
+background-color:#42f5f5;
+display: inline-block;
+margin-bottom: 20px;
+padding-right: 107px;
+border-radius: 10px 20px 10px 20px;
+margin-right: 10px;
+margin-left: 10px;
+transform: skewX(5deg);
+}
+
+.why {
+border-style:solid;
+border-color: black;
+background-color:#42f5f5;
+border-radius: 10px 20px 10px 20px;
+margin-bottom: 10px;
+margin-right: 10px;
+margin-left: 10px;
+transform: skewX(5deg);
+}
+
+footer {
+background-color: #ffeecc;
+border-style: solid;
+border-color: #ffeecc;
+}
+
+video {
+width: 490px;
+height: 550x;
+float:right;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+#intro {
+width: 490px;
+height: 500x;
+float:right;
+margin-top: 50px;
+margin-right: 10px;
+}
+
+.fbsprite{
+float:left;
+background: url(../images/sprite.png) no-repeat -182px -91px;
+width: 33px;
+height: 33px;
+margin-left: 300px;
+margin-right:300px;
+margin-top:-20px;
+}
+
+.fbsprite:hover {
+float:left;
+background: url(../images/sprite.png) no-repeat -182px -16px;
+width: 33px;
+height: 33px;
+margin-left: 300px;
+margin-right:300px;
+margin-top:-20px;
+}
+
+.twtsprite{
+float:right;
+background: url(../images/sprite.png) no-repeat -296px -91px;
+width: 33px;
+height: 33px;
+margin-right:300px;
+margin-left: 300px;
+margin-top:-20px;
+}
+
+.twtsprite:hover {
+background: url(../images/sprite.png) no-repeat -296px -16px;
+width: 33px;
+height: 33px;
+margin-right:300px;
+margin-left: 300px;
+margin-top:-20px;
+}
+
+#foot {
+background-color: white;
+border-color: white;
+}
