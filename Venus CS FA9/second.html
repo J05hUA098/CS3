@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#images {
+		height: 200px;
+		width: 20%;
+		margin-top: 10px;
+		}
+	</style>
+</head>
+<body>	
+	<button onclick="image1()">Change!</button>
+	<button onclick="image2()">Revert!</button>
+	<br>
+	<center><img id="images" src="images/beatles.jpg"></center>
+	<script>
+		function image1() {
+		document.getElementById("images").src = "images/beatles.jpg";
+	}
+		function image2() {
+		document.getElementById("images").src = "images/parokya.jpg	";
+	}
+	</script>
+</body>
+</html>
