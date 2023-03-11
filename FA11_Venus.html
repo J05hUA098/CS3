@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+	var x = prompt("Please indicate a number:");
+	var y = prompt("Please indicate a number:");
+	var z = prompt("Please indicate a number:");
+
+		determineTriangle(x, y, z);
+		
+		function determineTriangle(x, y, z) {
+			
+				if (x == y && y == z) {
+					alert("The triangle is EQUILATERAL.");
+				}
+				
+				else if (x == y || x == z || y == z) {
+					alert("The triangle is ISOSCELES.");
+				}
+				else {
+					alert("The triangle is SCALENE.");
+				}
+				}
+		</script>
+	</body>
+</html>
