@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<meta charset="UTF-8">
+ 		<meta name="author" content="Joshua Dave D. Venus">
+ 		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="revised" content="3-23-2023">
+ 		<link rel="icon" href="icon.png" type="image/gif">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick = "myFunction()"> Click here to put your name </button>     <!-- this button will ask the user's name -->
+     <script>
+    	/* do not forget to include comments in your answer */
+		function myFunction() {
+		var x = prompt("Please enter your name");          // this is where the user put his name
+		document.getElementById("thename").innerHTML = x;
+		var y = x.length;
+		while(y > 9) {
+		y = (y - (y % 10)) / 10 + (y % 10);            //  this is the equation or mudullo incase the name has more than 9 letter
+		}
+		
+		switch(y) { 
+			case 0:
+				document.getElementById("fortune").innerHTML = "For God so loved the world, that He gives his only begotten son, that whoever believes in Him shall not perish but have everlasting life. - John 3:16";   // This statement will show up when their is no name indicated or default
+				break;
+			case 1:
+				document.getElementById("fortune").innerHTML = "Give all your worries and cares to God, for he cares about you. - 1 Peter 5:7";  // This statement will show up when their is only 1 letter or the result of the modulo is 1.
+				break;
+			case 2:
+				document.getElementById("fortune").innerHTML = " God is love. - 1 John 4:8";    // This statement will show up when their is only 2 letter or the result of the modulo is 2.
+				break;
+			case 3:
+				document.getElementById("fortune").innerHTML = "When the time is right, I the Lord will make it happen. - Isaiah 60:22";   // This statement will show up when their is only 3 letter or the result of the modulo is 3.
+				break;
+			case 4:
+				document.getElementById("fortune").innerHTML = "Love one another. - John 15:12";  // This statement will show up when their is only 4 letter or the result of the modulo is 4.
+				break;
+			case 5:
+				document.getElementById("fortune").innerHTML = "Blessed are those who are persecuted, for they own the heaven. - Matthew 5:10";  // This statement will show up when their is only 5 letter or the result of the modulo is 5.
+				break;
+			case 6:
+				document.getElementById("fortune").innerHTML = "Children, obey your parents in the LORD for this is right. - Ephesians 6:11";  // This statement will show up when their is only 6 letter or the result of the modulo is 6.
+				break;
+			case 7:
+				document.getElementById("fortune").innerHTML = " There is a way that seems right unto a man, but it is a pathway leading to death. - Proverbs 14:12";  // This statement will show up when their is only 7 letter or the result of the modulo is 7.
+				break;
+			case 8:
+				document.getElementById("fortune").innerHTML = "God created the heaven and the earth. - Genesis 1:1";  // This statement will show up when their is only 8 letter or the result of the modulo is 8.
+				break;
+			case 9:
+				document.getElementById("fortune").innerHTML = "Trust in the LORD with all your heart and lean not on your own understanding. - Proverbs 3:5";  // This statement will show up when their is only 9 letter or the result of the modulo is 9.
+				break;
+		
+		}
+		}
+    
+    </script>
+   
+</body>
+</html>
