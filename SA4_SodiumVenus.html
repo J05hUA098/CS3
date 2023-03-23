@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Deprecation Calculator</title>
+		<meta charset="UTF-8">
+ 		<meta name="author" content="Joshua Dave D. Venus">
+ 		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="revised" content="3-23-2023">
+ 		<link rel="icon" href="icon.png" type="image/gif">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Car Depreciation Calculator </h1>
+	<h2> Your Car Model: <span id="model"> </span></h2>
+    <h2> Car Cost: <span id="cost"> </span></h2>
+    <h2> Age of your Car: <span id="age"> </span></h2>
+    <h2> Good Condition?: <span id="condition"> </span></h2>
+    <h2> Your Car's Current Market Value: <span id="currentvalue"> </span></h2>
+    
+    <button onclick="enterCar()"> Enter your Car information </button>
+    <script>
+ 
+    	function enterCar() {
+		
+        	var model = prompt("Enter the car model you want:");     // asking the user to input the brand of his/her car
+			
+            var price = parseInt(prompt("Enter the cost of the car:"));  // asking the cost of the car
+			
+            var age = prompt("How old is the car:");  // sking how old is the car
+			
+            var ok = confirm("In Good Condition? Ok for Yes / Cancel for No");  // to confirm if it is still on good condition or not
+            
+			
+			document.getElementById("model").innerHTML = model;
+            document.getElementById("cost").innerHTML = price;
+            document.getElementById("age").innerHTML = age;
+			
+			if (ok== true) {  // to input the choice of the user in the confirmation
+			document.getElementById("condition").innerHTML = "Yes";
+			} else {
+			document.getElementById("condition").innerHTML = "No";
+			}
+			
+			
+			computeMarketValue(parseFloat(age), parseFloat(price), ok);
+        }
+        
+        function computeMarketValue( age, price, ok) {  
+			if (ok != true) { // function that will work if the car is not on good condition
+			price = price * 0.9; } // price will drop 10%
+			else {
+			if (age > 10) { //   price = 70000 if age is greater than 10
+	        	price = 70000;
+	        }
+			else if (age > 5) { // price will drop 75% when age is equal to 5
+	        	price = 0.25 * price;
+	        }
+			else if (age == 5) {  // price will drop 50% when age is equal to or greater than 5
+	        	price = 0.50 * price;
+	        }
+			else if (age >= 8) { // price will be 100000 when age is equal to or greater than 8
+	        	price = 100000;
+	        }
+			}
+			
+	  		document.getElementById("currentvalue").innerHTML = price; // in order to know the price
+		}
+    </script>
+    
+</body>
+</html>
