@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>  </title> 
+		<meta charset="UTF-8">
+ 		<meta name="author" content="Joshua Dave D. Venus">
+ 		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="revised" content="4-17-2023">
+ 		<link rel="icon" href="icon.png" type="image/gif">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			p {
+				display: inline-block;
+			}
+			#home {
+				text-align: center;
+			}
+			#result {
+			position: absolute;
+			transform: translate(-59%, 40%);
+			padding: 2px;
+			margin: 10px auto;
+			text-align: center;
+			border: 1px solid black;
+			display: none;
+			}
+			span {
+				display: inline-block;
+				padding: 10px;
+				width: 55px;
+				border: 1px double black;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="home">
+			<form>
+				<h1 style="color:red" for="name"> Please input a number between 2 and 10: </h1>
+				<br/>
+				<input type="number" id="row" placeholder="# of Rows">
+				<p>by</p>
+				<input type="number" id="column" placeholder="# of Columns">
+			</form>
+			<br/>
+			<button onclick="myFunction()">Click me to generate the table</button> </br></br>
+
+			<div id="result">
+				<br/><br/>
+			</div>
+		</div>
+		
+		<script>
+			function myFunction() {
+				var range1 = parseInt(document.getElementById("row").value);
+				var range2 = parseInt(document.getElementById("column").value);
+				var validInput = true;
+				
+				if(range1 < 2 || range1 > 10 || range2 < 2 || range2 > 10) {
+					alert("Please input the appropriate values (2~10)");
+					validInput = false;
+				}
+				
+				if (validInput) {
+					var x = 1;
+					var output = "";
+					while(x <= range1){
+						var y = 1;
+						while(y <= range2){
+							output += "<span>" + y * x + "</span>"; 
+							y++;
+						}
+						output += "<br/>";
+						x++;
+					}
+					document.getElementById("result").innerHTML = output;
+					document.getElementById("result").style.display = "inline-block";
+				}
+			}
+		</script>
+	</body>
+</html>
