@@ -16,19 +16,20 @@
 				text-align: center;
 			}
 			#result {
+			padding: 2px;
 			position: absolute;
 			transform: translate(-59%, 40%);
-			padding: 2px;
-			margin: 10px auto;
+			margin: 15px auto;
 			text-align: center;
-			border: 1px solid black;
+			border: 2px solid black;
 			display: none;
+			background-color: yellow;
 			}
 			span {
-				display: inline-block;
+				border: 1px double black;
 				padding: 10px;
 				width: 55px;
-				border: 1px double black;
+				display: inline-block;
 			}
 		</style>
 	</head>
@@ -52,21 +53,21 @@
 		
 		<script>
 			function myFunction() {
-				var range1 = parseInt(document.getElementById("row").value);
-				var range2 = parseInt(document.getElementById("column").value);
+				var table = parseInt(document.getElementById("row").value);
+				var tablex = parseInt(document.getElementById("column").value);
 				var validInput = true;
 				
-				if(range1 < 2 || range1 > 10 || range2 < 2 || range2 > 10) {
-					alert("Please input the appropriate values (2~10)");
+				if(table < 2 || table > 10 || tablex < 2 || tablex > 10) {
+					alert("Please input the right numbers (2 to 10)");
 					validInput = false;
 				}
 				
 				if (validInput) {
 					var x = 1;
 					var output = "";
-					while(x <= range1){
+					while(x <= table){
 						var y = 1;
-						while(y <= range2){
+						while(y <= tablex){
 							output += "<span>" + y * x + "</span>"; 
 							y++;
 						}
