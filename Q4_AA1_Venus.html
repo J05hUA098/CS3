@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="UTF-8">
+ 		<meta name="author" content="Joshua Dave D. Venus">
+ 		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="revised" content="5-1-2023">
+ 		<link rel="icon" href="" type="image/gif">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AA1 Venus</title>
+  </head>
+  <body>
+    <script>
+      var geneticCode = {   // the genetic code table
+        AUG: "Met",
+        UUU: "Phe",
+        UUC: "Phe",
+        UUA: "Leu",
+        UUG: "Leu",
+        UCU: "Ser",
+        UCC: "Ser",
+        UCA: "Ser",
+        UCG: "Ser",
+        UAU: "Tyr",
+        UAC: "Tyr",
+        UGU: "Cys",
+        UGC: "Cys",
+        UGG: "Trp",
+        UAA: "STOP",
+        UAG: "STOP",
+        UGA: "STOP",
+        CUU: "Leu",
+        CUC: "Leu",
+        CUA: "Leu",
+        CUG: "Leu",
+        CCU: "Pro",
+        CCC: "Pro",
+        CCA: "Pro",
+        CCG: "Pro",
+        CAU: "His",
+        CAC: "His",
+        CAA: "Gln",
+        CAG: "Gln",
+        CGU: "Arg",
+        CGC: "Arg",
+        CGA: "Arg",
+        CGG: "Arg",
+        AUU: "Ile",
+        AUC: "Ile",
+        AUA: "Ile",
+        AUG: "Met",
+        ACU: "Thr",
+        ACC: "Thr",
+        ACA: "Thr",
+        ACG: "Thr",
+        AAU: "Asn",
+        AAC: "Asn",
+        AAA: "Lys",
+        AAG: "Lys",
+        AGU: "Ser",
+        AGC: "Ser",
+        AGA: "Arg",
+        AGG: "Arg",
+        GUU: "Val",
+        GUC: "Val",
+        GUA: "Val",
+        GUG: "Val",
+        GCU: "Ala",
+        GCC: "Ala",
+        GCA: "Ala",
+        GCG: "Ala",
+        GAU: "Asp",
+        GAC: "Asp",
+        GAA: "Glu",
+        GAG: "Glu",
+        GGU: "Gly",
+        GGC: "Gly",
+        GGA: "Gly",
+        GGG: "Gly"
+      };
+      var mRNA = "";  // Prompting the user for an mRNA sequence
+      var validInput = false;
+
+      while (!validInput) {
+        mRNA = prompt("Enter an mRNA sequence:");
+
+        if (mRNA && /^[ACGU]*$/.test(mRNA.toUpperCase())) {  // Check if the input is right or wrong
+          validInput = true;
+        } else {
+          alert("Invalid input. Please enter a valid mRNA sequence.");
+        }
+      }
+
+      var startCodonIndex = mRNA.indexOf("AUG");   // Find the first codon and determine the reading frame
+      var readingFrame = mRNA.substring(startCodonIndex);
+      
+      var codons = [];  // Divides the sequence by 3 and to determine the codons inputted
+      for (var i = 0; i < readingFrame.length; i += 3) {
+        var codon = readingFrame.substring(i, i + 3);
+        codons.push(codon);
+		
+        
+        if (codon == "UAA" || codon == "UAG" || codon == "UGA") {   // Stop when these codons are in the sequence
+          break;
+        }
+      }
+      
+      // Translate each codon to its corresponding amino acid
+      var aminoAcids = [];
+      for (var i = 0; i < codons.length; i++) {
+        var codon = codons[i];
+        var aminoAcid = "Unknown";
+        if (codon in geneticCode) {
+          aminoAcid = geneticCode[codon];
+        }
+        aminoAcids.push(aminoAcid);
+		}
+      
+      document.write("[" + codons.join(", ") + "]<br>");    // displays the output
+      for (var i = 0; i < aminoAcids.length; i++) {
+        document.write(codons[i] + " --> " + aminoAcids[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>
