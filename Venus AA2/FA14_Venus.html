@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	#legend {
+	font-size: 20px;
+	text-align: center;
+	
+	}
+	
+#home {
+  font-family: Tahoma;
+  background-image: url('cs.jpg');
+  color: white;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  	border-color:white;
+	background-color: #ffeecc;
+  align-items: center;
+  font-size: 13px;
+}
+
+#login {
+  width: 450px;
+  margin: auto;
+  position: absolute;
+  background-color: rgb(60,60,60);
+  border-radius: 10px 20px 10px 20px;
+}
+
+	#welcome {
+	text-align:center;
+	background-color: rgb(60,60,60);
+	color:white;
+	font-family: Tahoma;
+	}
+	
+	span {
+	color:black;
+	}
+		
+	input[type=reset] {
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: all 0.3s ease-in-out; 
+}
+
+	input[type=submit] {
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+input[type=reset]:hover {
+  background-color: #c0392b; /* Change the background color on hover */
+}
+
+/* Targeting form elements */
+input[type=text],
+input[type=email],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Hover effect */
+input[type=submit]:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+}
+
+/* Hover effect */
+input[type=text]:hover,
+input[type=email]:hover,
+textarea:hover {
+  border-color: #3498db; /* Change the border color on hover */
+}
+
+	#name {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#userName {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#pWord {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#gen {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#emailAddress {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#address {
+	width:400px;
+	font-family: Fantasy;
+	}
+		
+	#interest {
+	width:400px;
+	font-family: Fantasy;
+	}
+	
+	#nametag,
+	#usernametag,
+	#passwordnametag,
+	#gendernametag,
+	#emailnametag,
+	#addressnametag,
+	#interestnametag {
+	color: 
+	}
+	
+	#nameValue,
+	#userNameValue,
+	#genderValue,
+	#emailValue,
+	#addressValue,
+	#interestValue {
+	font-family: Fantasy;
+	color:white;
+	}
+	</style>
+</head>
+<body>
+		<div id="backgroundPic">
+	<div id="home">
+		<form id="login">
+			<h1 id="welcome"> Sign up now for you to have help in your Computer Science Classes! </h1>
+			<fieldset form="login" id="field">
+				<legend id ="legend"> Online Tutor Sign up </legend>
+				<label for="name" id="nametag"> Name: </label>
+				<br>
+				<input type="text" id="name" name="name" onblur="onYes('name')">
+				<br>
+				<label for="userName" id="usernametag"> Username: </label>
+				<br>
+				<input type="text" id="userName" name="userName" onblur="onYes('userName')">
+				<br>
+				<label for="password" id="passwordnametag"> Password: </label>
+				<br>
+				<input type= "password" id="pWord" name="password" onblur="onYes('pWord')">
+				<br>
+				<label for="gender" id="gendernametag"> What is your gender: </label></br>
+				<select name="gender" id="gen" onblur= "onYes('gen')">
+					<option value="male"> Male </option>
+					<option value="female"> Female </option>
+					<option value="not"> Prefer not to mention </option>
+				</select>
+				<br><br>
+				<label for="email" id="emailnametag"> Email Address </label>
+				<br>
+				<input type="email" id="emailAddress" name="emailAddress" onblur="onYes('emailAddress')">
+				<br>
+				<label for="address" id="addressnametag"> Address: </label>
+				<br>
+				<input type="text" id="address" name="address" onblur="onYes('address')">
+				<br>
+				<label for="interest" id="interestnametag"> Interest/s: </label>
+				<br>
+				<textarea id="interest" name="interest" row="5" cols="50" onblur="onYes('interest')"></textarea>
+				<br>
+				<input type="reset" id="reset" value="Reset" onclick="huhu()">
+				<input type="submit" id="submit" value="Submit" onclick="results(event)">
+				<br>
+				<br>
+				<legend> Here is your info: </legend>
+				<p style="font-family: Bahnschrift SemiBold"> Your name is: <span id="nameValue"></span></p>
+				<p style="font-family: Bahnschrift SemiBold"> Your userame is: <span id="userNameValue"></span></p>
+				<p style="font-family: Bahnschrift SemiBold"> Your gender is: <span id="genderValue"></span></p>
+				<p style="font-family: Bahnschrift SemiBold"> Your email address is: <span id="emailValue"></span></p>
+				<p style="font-family: Bahnschrift SemiBold"> Your adress is: <span id="addressValue"></span></p>
+				<p style="font-family: Bahnschrift SemiBold"> Your Interest/s is: <span id="interestValue"></span></p>
+				<br>
+				<center><p style="font-family: Bahnschrift SemiBold; font-size: 15px" id="output"> </p></center>
+			</fieldset>
+		</form>
+	</div>
+	</div>
+		<script>
+		
+function onYes(id) {
+  var x = document.getElementById(id).value;
+
+  if (x == "") {
+    document.getElementById(id).style.border = "2px solid red";
+  } else {
+    document.getElementById(id).style.border = "3px solid green";
+  }
+}
+
+function huhu() {
+  document.getElementById("name").style.border = "1px solid black";
+  document.getElementById("userName").style.border = "1px solid black";
+  document.getElementById("pWord").style.border = "1px solid black";
+  document.getElementById("emailAddress").style.border = "1px solid black";
+  document.getElementById("address").style.border = "1px solid black";
+  document.getElementById("interest").style.border = "1px solid black";
+  document.getElementById("gen").style.border = "1px solid black";
+  document.getElementById("nameValue").innerHTML = "";
+  document.getElementById("userNameValue").innerHTML = "";
+  document.getElementById("genderValue").innerHTML = "";
+  document.getElementById("emailValue").innerHTML = "";
+  document.getElementById("addressValue").innerHTML = "";
+  document.getElementById("interestValue").innerHTML = "";
+  	document.getElementById("output").innerHTML = "";
+}
+
+function results(event) {
+  event.preventDefault();
+
+  // get the values of the required fields
+  var name = document.getElementById("name").value.trim();
+  var userName = document.getElementById("userName").value.trim();
+  var pWord = document.getElementById("pWord").value.trim();
+  var emailAddress = document.getElementById("emailAddress").value.trim();
+  var address = document.getElementById("address").value.trim();
+  var gen = document.getElementById("gen").value.trim();
+  var interest = document.getElementById("interest").value.trim();
+  var check = false;
+  
+  // check if any of the required fields are empty
+  if (name === "" || userName === "" || pWord === "" || emailAddress === "" || address === "" || gen === "" || interest == "") {
+    alert("Please fill in all the required fields or enter a valid email address.");
+  } else {
+    // display the user's information
+    document.getElementById("nameValue").innerHTML = name;
+    document.getElementById("userNameValue").innerHTML = userName;
+    document.getElementById("genderValue").innerHTML = gen;
+    document.getElementById("emailValue").innerHTML = emailAddress;
+    document.getElementById("addressValue").innerHTML = address;
+    document.getElementById("interestValue").innerHTML = document.getElementById("interest").value;
+	let check = true;
+	document.getElementById("output").innerHTML = "We'll contact you once we found your Computer Science buddy!";
+	
+
+  }
+}
+	</script>
+	</body>
+</html>
