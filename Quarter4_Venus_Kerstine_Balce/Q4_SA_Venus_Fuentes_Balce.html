@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	#welcome {
+	border: 1px solid #98877F;
+	font-family: Tahoma;
+	font-size: 70px;
+	color: white;
+	background-color: #98877F;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align:center;
+	width: 100%;
+	}
+	
+	body {
+	background-image: url("https://thumbs.dreamstime.com/b/pencil-answer-sheets-standardized-test-form-answers-bubbled-multiple-choice-answer-sheet-pencil-answer-sheets-178381018.jpg");
+	background-size: 100%;
+	margin: 0px;
+	}
+	
+		#questions {
+	background-color: yellow;
+	border: 5px solid black;
+	color: black;
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+	margin: 10px;
+	cursor: pointer; 
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px grey;
+	position: absolute;
+	top: 200px;
+	right: 150px;
+	left:150px;
+	}
+	
+	input[type="radio"] {
+	border: 5px solid black;
+	appearance: none;
+	background-color: blue;
+	border-radius: 30%;
+	width: 40px;
+	height: 40px;
+	position:relative;
+	}
+	
+	input[type="radio"]:checked:before {
+	border: 5px solid black;
+	appearance: none;
+	background-color: white;
+	border-radius: 30%;
+	width: 40px;
+	height: 40px;
+	position:relative;
+	}
+	
+	input[type="radio"]:checked:after {
+	content: '';
+	display: block;
+	border: 5px solid black;
+	appearance: none;
+	background-color: white;
+	border-radius: 30%;
+	width: 30px;
+	height: 30px;
+	position:relative;
+	left:-5px;
+	top: -5px;
+	
+	}
+	
+	#a {
+	margin-left: -480px;
+	}
+	
+	#b {
+	margin-left: -513px;
+	}
+	
+	#c {
+	margin-left: -490px;
+	}
+	
+	#d {
+	margin-left: -22px;
+	}
+	
+	#e {
+	margin-left: -34px;
+	}
+	
+	#f {
+	margin-left: -409px;
+	}
+	
+	#g {
+	margin-left: -485px;
+	}
+	
+	#h {
+	margin-left: -516px;
+	}
+	
+	#i {
+	margin-left: -525px;
+	}
+	
+	#j {
+	margin-left: -218px;
+	}
+	
+	#k {
+	margin-left: -252px;
+	}
+	
+	#l {
+	margin-left: 55px;
+	}
+	
+	#m {
+	margin-left: -447px;
+	}
+	
+	#n {
+	margin-left: -467px;
+	}
+	
+	#o {
+	margin-left: -452px;
+	}
+	
+	#p {
+	margin-left: 100px;
+	}
+	
+	#q {
+	margin-left: -246px;
+	}
+	
+	#r {
+	margin-left: 76px;
+	}
+	
+	#s {
+	margin-left: -525px;
+	}
+	
+	#t {
+	margin-left: -513px;
+	}
+	
+	#u {
+	margin-left: -528px;
+	}
+	
+	#v {
+	margin-left: -460px;
+	}
+	
+	#w {
+	margin-left: -388px;
+	}
+	
+	#x {
+	margin-left: -468px;
+	}
+	
+	#y {
+	margin-left: -251px;
+	}
+	
+	#z {
+	margin-left: -401px;
+	}
+	
+	#ab {
+	margin-left: -352px;
+	}
+	
+	#ac {
+	margin-left: -453px;
+	}
+	
+	#ad {
+	margin-left: -498px;
+	}
+	
+	#ae {
+	margin-left: -498px;
+	}
+	
+	#af {
+	margin-left: -467px;
+	}
+	
+	#ag {
+	margin-left: -450px;
+	}
+	
+	#ah {
+	margin-left: -450px;
+	}
+	
+	#ai {
+	margin-left: -292px;
+	}
+	
+	#aj {
+	margin-left: -520px;
+	}
+	
+	#ak {
+	margin-left: -514px;
+	}
+	
+	#al {
+	margin-left: -441px;
+	}
+	
+	#am {
+	margin-left: -500px;
+	}
+	
+	#an {
+	margin-left: -420px;
+	}
+	
+	#ao {
+	margin-left: -509px;
+	}
+	
+	#ap {
+	margin-left: -503px;
+	}
+	
+	#aq {
+	margin-left: -480px;
+	}
+	
+	#ar {
+	margin-left: -425px;
+	}
+	
+	#as {
+	margin-left: -352px;
+	}
+	
+	#at {
+	margin-left: -352px;
+	}
+	
+	fieldset {
+	border: 5px solid black;
+	margin-bottom: 10px;
+	background-color: white;
+	}
+	legend{
+		border: 2px solid black;
+		background-color: white;
+	}
+	
+	#do {
+	margin-left: -360px;
+	}
+	
+	#re {
+	margin-left: -150px;
+	}
+	
+	#mi {
+	margin-left: 160px;
+	}
+	
+		#answer16 {
+	font-size: 30px;
+		width:400px;
+	font-family: Tahoma;
+	}
+	
+		#answer17 {
+	font-size: 30px;
+		width:400px;
+	font-family: Tahoma;
+	}
+	
+		#answer18 {
+	font-size: 30px;
+		width:400px;
+	font-family: Tahoma;
+	}
+	
+		#answer19 {
+	font-size: 30px;
+		width:400px;
+	font-family: Tahoma;
+	}
+	
+		#answer20 {
+	font-size: 30px;
+		width:400px;
+	font-family: Tahoma;
+	}
+	
+	#score {
+	font-size: 50px;
+	border: 5px solid black;
+	background-color: white;
+	}
+	
+	input[type=submit] {
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: all 0.3s ease-in-out;
+}
+
+	input[type=reset] {
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: all 0.3s ease-in-out; 
+}
+
+	</style>
+	</head>
+	<body>
+		<p id="welcome"> NCE Reviewer: Try it and test your KNOWLEDGE! </p>
+		<div id="background">
+		<div id="questions">
+		    <h1>Multiple Choice Test</h1>
+    <form>
+	<fieldset>
+	<legend> Question 1 </legend>
+      <p>An organism has been found to have the following characteristics: has cell walls, heterotrophic, with mitochondria, and is aerobic. What is the possible identity of the organism?</p> <!-- c -->
+      <label>
+        <input type="radio" name="q1" value="a" id="a">
+        A. an animal
+      </label><br>
+      <label>
+        <center><input type="radio" name="q1" value="b" id="b">
+        B. a plant
+      </label><br>
+      <label>
+        <center><input type="radio" name="q1" value="c" id="c">
+        C. a fungus
+      </label><br>
+	   <P id= "correct1"> </p>
+	  <br>
+     </fieldset>
+	 <fieldset>
+	 <legend> Question 2 </legend>
+      <p>Atoms are made up of protons, electrons, and neutrons. What holds an atom together?</p>  <!-- b -->
+      <label>
+        <input type="radio" name="q2" value="a" id="d">
+        A. force of attraction between neutron and electron
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="b" id="e">
+        B. force of attraction between proton and electron
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="c" id="f">
+        C. force of gravity
+      </label><br>
+	  <P id= "correct2"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 3 </legend>
+	  <p>Which type of blood vessel generally carry oxygenated blood away from the heart to the different part of the body?</p> <!-- b -->
+      <label>
+        <input type="radio" name="q3" value="a" id="g">
+        A. Capillary
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="b" id="h">
+        B. Artery
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="c" id="i">
+        C. Aorta
+      </label><br>
+	  <P id= "correct3"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 4 </legend>
+	  <p>Salt and sugars are often used as food preservatives.Foods such as jams, salted fish and eggs do not spoil easily because high amount of salt and sugar:</p> <!-- c -->
+      <label>
+        <input type="radio" name="q4" value="a" id="j">
+        A. is toxic to most microorganisms
+      </label><br>
+      <label>
+        <input type="radio" name="q4" value="b" id="k">
+        B. making the food more stinky
+      </label><br>
+      <label>
+        <input type="radio" name="q4" value="c" id="l">
+        C. prevents water from being available to microorganisms
+      </label><br>
+	  <P id= "correct4"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 5 </legend>
+	        <p> Zoology is the study of animals in general; while the study of insects is specifically called:</p> <!-- a -->
+      <label>
+        <input type="radio" name="q5" value="a" id="m">
+        A. Entomology
+      </label><br>
+      <label>
+        <input type="radio" name="q5" value="b" id="n">
+        B. Phycology
+      </label><br>
+      <label>
+        <input type="radio" name="q5" value="c" id="o">
+        C. Malacology
+      </label><br>
+	  <P id= "correct5"> </p>
+	  <br>
+	  </fieldset>
+	  <fieldset>
+	  <legend> Question 6 </legend>
+	        <p> Which of the following is <b>false</b>?</p> <!-- a -->
+      <label>
+        <input type="radio" name="q6" value="a" id="p">
+        A. Temperature is one of the factors when describing climate.
+      </label><br>
+      <label>
+        <input type="radio" name="q6" value="b" id="q">
+        B. Climate change is happening.
+      </label><br>
+      <label>
+        <input type="radio" name="q6" value="c" id="r">
+        C. The type of front that moves the fastest is the cold front.
+      </label><br>
+	  <P id= "correct6"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 7 </legend>
+	        <p> Boyle's Law and Charles'Law explain the behavior of:</p> <!-- c -->
+      <label>
+        <input type="radio" name="q7" value="a" id="s">
+        A. solids
+      </label><br>
+      <label>
+        <input type="radio" name="q7" value="b" id="t">
+        B. liquids
+      </label><br>
+      <label>
+        <input type="radio" name="q7" value="c" id="u">
+        C. gases
+      </label><br>
+	  <P id= "correct7"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 8 </legend>
+	        <p> The largest family of flowering plants is in the:</p> <!-- b -->
+      <label>
+        <input type="radio" name="q8" value="a" id="v">
+        A. rose family
+      </label><br>
+      <label>
+        <input type="radio" name="q8" value="b" id="w">
+        B. composite family
+      </label><br>
+      <label>
+        <input type="radio" name="q8" value="c" id="x">
+        C. pea family
+      </label><br>
+	  <P id= "correct8"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 9</legend>
+	        <p> The pH scale is used to?</p> <!-- a -->
+      <label>
+        <input type="radio" name="q9" value="a" id="y">
+        A. indicate acidity and alkalinity
+      </label><br>
+      <label>
+        <input type="radio" name="q9" value="b" id="z">
+        B. measure density
+      </label><br>
+      <label>
+        <input type="radio" name="q9" value="c" id="ab">
+        C. measure soil fertility
+      </label><br>
+	  <P id= "correct9"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 10 </legend>
+	        <p> What name is given to one-celled organisms lacking an organized nucleus?</p> <!-- a -->
+      <label>
+        <input type="radio" name="q10" value="a" id="ac">
+        A. prokaryotes
+      </label><br>
+      <label>
+        <input type="radio" name="q10" value="b" id="ad">
+        B. bacteria
+      </label><br>
+      <label>
+        <input type="radio" name="q10" value="c" id="ae">
+        C. amoeba
+      </label><br>
+	  <P id= "correct10"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 11 </legend>
+	        <p>Dry ice is solid carbon dioxide and is very cold. When removed from a storage container, the dry ice transforms directly into a gas without melting. This is an example of:</p> <!-- c -->
+      <label>
+        <input type="radio" name="q11" value="a" id="af">
+        A. Distillation
+      </label><br>
+      <label>
+        <input type="radio" name="q11" value="b" id="ag">
+        B. Evaporation
+      </label><br>
+      <label>
+        <input type="radio" name="q11" value="c" id="ah">
+        C. Sublimation
+      </label><br>
+	  <P id= "correct11"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 12 </legend>
+	        <p> Which of the following is an example of Newton's second law of motion?</p> <!-- c -->
+			<p id="do">I. A parked vehicle.</p>
+			<p id="re">II. A basketball player throwing a ball.</p>
+			<p id="mi">III. A seatbelt preventing a passenger from hitting the windshield.</p>
+			
+      <label>
+        <input type="radio" name="q12" value="a" id="ai"> 
+        A. there is no given example
+      </label><br>
+      <label>
+        <input type="radio" name="q12" value="b" id="aj">
+        B. I only
+      </label><br>
+      <label>
+        <input type="radio" name="q12" value="c" id="ak">
+        C. II only
+      </label><br>
+	  <P id= "correct12"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+	  <legend> Question 13 </legend>
+	        <p> Which among the following is <b>NOT</b> essential for seed germination in plants?<p> <!-- b -->
+      <label>
+        <input type="radio" name="q13" value="a" id="al">
+        A. water supply
+      </label><br>
+      <label>
+        <input type="radio" name="q13" value="b" id="am">
+        B. sunlight
+      </label><br>
+      <label>
+        <input type="radio" name="q13" value="c" id="an">
+        C. oxygen supply
+      </label><br>
+	  <P id= "correct13"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+		<legend> Question 14 </legend>
+	        <p> What is the first element in the periodic table? </p>
+      <label>
+        <input type="radio" name="q14" value="a" id="ao">
+        A. lithium
+      </label><br>
+      <label>
+        <input type="radio" name="q14" value="b" id="ap">
+        B. sodium
+      </label><br>
+      <label>
+        <input type="radio" name="q14" value="c" id="aq">
+        C. hydrogen
+      </label><br>
+	  <P id= "correct14"> </p>
+	  <br>
+      </fieldset>
+	  <fieldset>
+		<legend> Question 15 </legend>
+	        <p> Runners crossing the finish line of a race often takes time before they completely stop. Which best explain this?</p> <!-- a -->
+      <label>
+        <input type="radio" name="q15" value="a" id="ar">
+        A. Law of Inertia
+      </label><br>
+      <label>
+        <input type="radio" name="q15" value="b" id="as">
+        B. Law of Acceleration
+      </label><br>
+      <label>
+        <input type="radio" name="q15" value="c" id="at">
+        C. Theory of Relativity
+      </label><br>
+	  <P id= "correct15"> </p>
+	  <br>
+	  </fieldset>
+	  <h1 id="identification"> Identification problems </h1>
+	  <fieldset>
+		<legend> Question 16 </legend>
+	  <p> Question 16: A type of connective tissue found in the human body that provides support, structure, and protection to various organs and tissues. </p> <!-- bones -->
+      <form>
+		<label for="answer"> Your Answer: </label>
+		<input type="text" id="answer16" placeholder="Enter your answer" name="q16"><br>
+		<P id= "correct16"> </p>
+		</fieldset>
+		</form>
+      <br><br>
+	  <fieldset>
+		<legend> Question 17 </legend>
+	  <p> Primary organ of the central nervous system. It is responsible for controlling and coordinating all body functions, including sensation, movement, thought, and behavior. </p> <!-- brain -->
+      <form>
+		<label for="answer"> Your Answer: </label>
+		<input type="text" id="answer17" placeholder="Enter your answer" name="q17"><br>
+		<P id= "correct17"> </p>
+		</fieldset>
+		</form>
+      <br><br>
+	  <fieldset>
+		<legend> Question 18 </legend>
+	  <p> A group of stars that are percieved to form a recognizable pattern or shape in the sky, as seen from Earth. </p> <!-- constellation -->
+      <form>
+		<label for="answer"> Your Answer: </label>
+		<input type="text" id="answer18" placeholder="Enter your answer" name="q18"><br>
+		<P id= "correct18"></p>
+		</fieldset>
+		</form>
+      <br><br>
+	  <fieldset>
+		<legend> Question 19 </legend>
+	  <p> A phylum of aquatice animals that includes jellyfish, corals, sea anemones, and hydroids. They are found in both saltwater and freshwater environments, and exhibit a range of body forms and sizes. </p> <!-- cnidarians -->
+      <form>
+		<label for="answer"> Your Answer: </label>
+		<input type="text" id="answer19" placeholder="Enter your answer" name="q19"><br>
+		<P id= "correct19"> </p>
+		</fieldset>
+		</form>
+      <br><br>
+	  <fieldset>
+		<legend> Question 20 </legend>
+	  <p> Process by which green plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose. </p> <!-- photosynthesis -->
+      <form>
+		<label for="answer"> Your Answer: </label>
+		<input type="text" id="answer20" placeholder="Enter your answer" name="q20"><br>
+		<P id= "correct20"> </p>
+		</fieldset>
+		</form>
+		<p id="score"> Answer the test first and submit it to know your score.</p>
+	  	<input type="reset" id="reset" value="Reset" onclick="huhu()">
+      <input type="submit" value="Submit" onclick="checkAnswers()">
+    </form>
+		</div>
+		</div>
+	<script>
+	function checkAnswers() {
+	var answer1 = document.querySelector('input[name="q1"]:checked');
+	var answer2 = document.querySelector('input[name="q2"]:checked');
+	var answer3 = document.querySelector('input[name="q3"]:checked');
+	var answer4 = document.querySelector('input[name="q4"]:checked');
+	var answer5 = document.querySelector('input[name="q5"]:checked');
+	var answer6 = document.querySelector('input[name="q6"]:checked');
+	var answer7 = document.querySelector('input[name="q7"]:checked');
+	var answer8 = document.querySelector('input[name="q8"]:checked');
+	var answer9 = document.querySelector('input[name="q9"]:checked');
+	var answer10 = document.querySelector('input[name="q10"]:checked');
+	var answer11 = document.querySelector('input[name="q11"]:checked');
+	var answer12 = document.querySelector('input[name="q12"]:checked');
+	var answer13 = document.querySelector('input[name="q13"]:checked');
+	var answer14 = document.querySelector('input[name="q14"]:checked');
+	var answer15 = document.querySelector('input[name="q15"]:checked');
+	var answer16 = document.getElementsByName("q16")[0].value.toLowerCase();
+	var answer17 = document.getElementsByName("q17")[0].value.toLowerCase();
+	var answer18 = document.getElementsByName("q18")[0].value.toLowerCase();
+	var answer19 = document.getElementsByName("q19")[0].value.toLowerCase();
+	var answer20 = document.getElementsByName("q20")[0].value.toLowerCase();
+	var score = 0;
+	
+	if (answer1 && answer1.value === "c") {
+	document.getElementById("correct1").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct1").innerHTML = "Your answer is not correct! The answer is C.";
+	}
+	
+	if (answer2 && answer2.value === "b") {
+	document.getElementById("correct2").innerHTML = "Your answer is correct! The answer is B.";
+		score++;
+	} else {
+	document.getElementById("correct2").innerHTML = "Your answer is not correct! The answer is B.";
+	}
+	
+	if (answer3 && answer3.value === "b") {
+	document.getElementById("correct3").innerHTML = "Your answer is correct! The answer is B.";
+		score++; 
+	} else {
+	document.getElementById("correct3").innerHTML = "Your answer is not correct! The answer is B.";
+	}
+	
+	if (answer4 && answer4.value === "c") {
+	document.getElementById("correct4").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct5").innerHTML = "Your answer is not correct! The answer is C.";
+	}
+	
+	if (answer5 && answer5.value === "a") {
+	document.getElementById("correct5").innerHTML = "Your answer is correct! The answer is A.";
+		score++; 
+	} else {
+	document.getElementById("correct5").innerHTML = "Your answer is not correct! The answer is A.";
+	}
+	
+	if (answer6 && answer6.value === "a") {
+	document.getElementById("correct6").innerHTML = "Your answer is correct! The answer is A.";
+		score++; 
+	} else {
+	document.getElementById("correct6").innerHTML = "Your answer is not correct! The answer is A.";
+	}
+	
+	if (answer7 && answer7.value === "c") {
+	document.getElementById("correct7").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct7").innerHTML = "Your answer is not correct! The answer is C.";
+	}
+	
+	if (answer8 && answer8.value === "b") {
+	document.getElementById("correct8").innerHTML = "Your answer is correct! The answer is B.";
+		score++; 
+	} else {
+	document.getElementById("correct8").innerHTML = "Your answer is not correct! The answer is B.";
+	}
+	
+	if (answer9 && answer9.value === "a") {
+	document.getElementById("correct9").innerHTML = "Your answer is correct! The answer is A.";
+		score++; 
+	} else {
+	document.getElementById("correct9").innerHTML = "Your answer is not correct! The answer is A.";
+	}
+	
+	if (answer10 && answer10.value === "a") {
+	document.getElementById("correct10").innerHTML = "Your answer is correct! The answer is A.";
+		score++; 
+	} else {
+	document.getElementById("correct10").innerHTML = "Your answer is not correct! The answer is A.";
+	}
+	
+	if (answer11 && answer11.value === "c") {
+	document.getElementById("correct11").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct11").innerHTML = "Your answer is not correct! The answer is C.";
+	}
+	
+	if (answer12 && answer12.value === "c") {
+	document.getElementById("correct12").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct12").innerHTML = "Your answer is not correct! The answer is C.";
+	}
+	
+	if (answer13 && answer13.value === "b") {
+	document.getElementById("correct13").innerHTML = "Your answer is correct! The answer is B.";
+		score++; 
+	} else {
+	document.getElementById("correct13").innerHTML = "Your answer is not correct! The answer is B.";
+	}
+	
+	if (answer14 && answer14.value === "c") {
+	document.getElementById("correct14").innerHTML = "Your answer is correct! The answer is C.";
+		score++; 
+	} else {
+	document.getElementById("correct4").innerHTML = "Your answer is correct! The answer is C.";
+	}
+	
+	if (answer15 && answer15.value === "a") {
+	document.getElementById("correct15").innerHTML = "Your answer is correct! The answer is A.";
+		score++; 
+	} else {
+	document.getElementById("correct15").innerHTML = "Your answer is not correct! The answer is A.";
+	}
+	
+	if (answer16 === "bones") {
+	document.getElementById("correct16").innerHTML = "Your answer is correct! The answer is bones.";
+	score++;
+	} else {
+	document.getElementById("correct16").innerHTML = "Your answer is not correct! The answer is bones.";
+	}
+	
+	if (answer17 === "brain") {
+	document.getElementById("correct17").innerHTML = "Your answer is correct! The answer is brain.";
+	score++;
+	} else {
+	document.getElementById("correct17").innerHTML = "Your answer is not correct! The answer is brain.";
+	}
+	
+	if (answer18 === "constellation") {
+	document.getElementById("correct18").innerHTML = "Your answer is correct! The answer is constellation.";
+	score++;
+	} else {
+	document.getElementById("correct18").innerHTML = "Your answer is not correct! The answer is constellation.";
+	}
+	
+	if (answer19 === "cnidarians") {
+	document.getElementById("correct19").innerHTML = "Your answer is correct! The answer is cnidarians.";
+	score++;
+	} else {
+	document.getElementById("correct19").innerHTML = "Your answer is not correct! The answer is cnidarians.";
+	}
+	
+	if (answer20 === "photosynthesis") {
+	document.getElementById("correct20").innerHTML = "Your answer is correct! The answer is photosynthesis.";
+	score++;
+	} else {
+	document.getElementById("correct20").innerHTML = "Your answer is not correct! The answer is photosynthesis.";
+	}
+
+	if (answer1 && answer1.value === "" || answer2 && answer2.value === "" || answer3 && answer3.value === "" || answer4 && answer4.value === "" || answer5 && answer5.value === "" || answer6 && answer6.value === "" || answer7 && answer7.value === "" || answer8 && answer8.value === "" || answer9 && answer9.value === "" || answer10 && answer10.value === "" || answer11 && answer11.value === "" || answer12 && answer12.value === "" || answer13 && answer13.value === "" || answer14 && answer14.value === "" || answer15 && answer15.value === "" || answer16 === ""|| answer17 === ""|| answer18 === ""|| answer19 === ""|| answer20 === "") {
+	alert("Check because you must have 1 number or more that you missed");
+	document.getElementById("correct1").innerHTML = "";
+	document.getElementById("correct2").innerHTML = "";
+	document.getElementById("correct3").innerHTML = "";
+	document.getElementById("correct4").innerHTML = "";
+	document.getElementById("correct5").innerHTML = "";
+	document.getElementById("correct6").innerHTML = "";
+	document.getElementById("correct7").innerHTML = "";
+	document.getElementById("correct8").innerHTML = "";
+	document.getElementById("correct9").innerHTML = "";
+	document.getElementById("correct10").innerHTML = "";
+	document.getElementById("correct11").innerHTML = "";
+	document.getElementById("correct12").innerHTML = "";
+	document.getElementById("correct13").innerHTML = "";
+	document.getElementById("correct14").innerHTML = "";
+	document.getElementById("correct15").innerHTML = "";
+	document.getElementById("correct16").innerHTML = "";
+	document.getElementById("correct17").innerHTML = "";
+	document.getElementById("correct18").innerHTML = "";
+	document.getElementById("correct19").innerHTML = "";
+	document.getElementById("correct20").innerHTML = "";
+	document.getElementById("score").innerHTML = "Answer the test first and submit it to know your score.";
+}
+	document.getElementById("score").innerHTML = "Your score is " + score + "/20";
+}
+
+function huhu() {
+		document.getElementById("correct1").innerHTML = "";
+		document.getElementById("correct2").innerHTML = "";
+		document.getElementById("correct3").innerHTML = "";
+		document.getElementById("correct4").innerHTML = "";
+		document.getElementById("correct5").innerHTML = "";
+		document.getElementById("correct6").innerHTML = "";
+		document.getElementById("correct7").innerHTML = "";
+		document.getElementById("correct8").innerHTML = "";
+		document.getElementById("correct9").innerHTML = "";
+		document.getElementById("correct10").innerHTML = "";
+		document.getElementById("correct11").innerHTML = "";
+		document.getElementById("correct12").innerHTML = "";
+		document.getElementById("correct13").innerHTML = "";
+		document.getElementById("correct14").innerHTML = "";
+		document.getElementById("correct15").innerHTML = "";
+		document.getElementById("correct16").innerHTML = "";
+		document.getElementById("correct17").innerHTML = "";
+		document.getElementById("correct18").innerHTML = "";
+		document.getElementById("correct19").innerHTML = "";
+		document.getElementById("correct20").innerHTML = "";
+		document.getElementById("answer16").innerHTML = "";
+		document.getElementById("answer17").innerHTML = "";
+		document.getElementById("answer18").innerHTML = "";
+		document.getElementById("answer19").innerHTML = "";
+		document.getElementById("answer20").innerHTML = "";
+      var radioButtons = document.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach(function(button) {
+        button.checked = false;
+      });
+	  var scoreDisplay = document.getElementById('score');
+      scoreDisplay.textContent = 'Answer the test first and submit it to know your score.';
+	  }
+	</script>
+	</body>
+</html>
