@@ -666,7 +666,7 @@
 		<P id= "correct20"> </p>
 		</fieldset>
 		</form>
-		<p id="score"> Answer the test first and submit it to know your score.</p>
+		<p id="score">Your score yet is 0/20</p>
 	  	<input type="reset" id="reset" value="Reset" onclick="huhu()">
       <input type="submit" value="Submit" onclick="checkAnswers()">
     </form>
@@ -791,7 +791,7 @@
 	document.getElementById("correct14").innerHTML = "Your answer is correct! The answer is C.";
 		score++; 
 	} else {
-	document.getElementById("correct4").innerHTML = "Your answer is correct! The answer is C.";
+	document.getElementById("correct14").innerHTML = "Your answer is correct! The answer is C.";
 	}
 	
 	if (answer15 && answer15.value === "a") {
@@ -858,9 +858,10 @@
 	document.getElementById("correct18").innerHTML = "";
 	document.getElementById("correct19").innerHTML = "";
 	document.getElementById("correct20").innerHTML = "";
-	document.getElementById("score").innerHTML = "Answer the test first and submit it to know your score.";
-}
+	document.getElementById("score").innerHTML = "Your score yet is 0/20";
+}else {
 	document.getElementById("score").innerHTML = "Your score is " + score + "/20";
+}
 }
 
 function huhu() {
@@ -894,7 +895,7 @@ function huhu() {
         button.checked = false;
       });
 	  var scoreDisplay = document.getElementById('score');
-      scoreDisplay.textContent = 'Answer the test first and submit it to know your score.';
+      scoreDisplay.textContent = 'Your score yet is 0/20';
 	  }
 	</script>
 	</body>
